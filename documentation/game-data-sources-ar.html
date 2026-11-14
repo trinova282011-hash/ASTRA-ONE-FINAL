@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>بيانات لعبة Astra One ومصادرها</title>
+  <style>
+    :root { color-scheme: light; font-family: "Segoe UI", Tahoma, Arial, sans-serif; }
+    body { margin: 0; background: #f3f6fa; color: #172033; line-height: 1.7; }
+    main { max-width: 1180px; margin: 32px auto; padding: 0 18px 40px; }
+    h1 { margin-bottom: 4px; color: #10233f; }
+    h2 { margin: 30px 0 10px; color: #153b65; }
+    .note { padding: 14px 18px; border-right: 4px solid #d59b23; background: #fff8e6; border-radius: 8px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .tag { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .88rem; font-weight: 700; white-space: nowrap; }
+    .real { background: #d9f3e5; color: #14532d; }
+    .derived { background: #dcecff; color: #16457a; }
+    .approx { background: #fff0c2; color: #704b00; }
+    .fiction { background: #fce1e1; color: #7f1d1d; }
+    .table-wrap { overflow-x: auto; background: white; border: 1px solid #d9e1eb; border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; min-width: 780px; }
+    th, td { padding: 10px 12px; text-align: right; vertical-align: top; border-bottom: 1px solid #e6ebf1; }
+    th { background: #eaf1f8; color: #18395d; position: sticky; top: 0; }
+    tr:last-child td { border-bottom: 0; }
+    a { color: #07599b; overflow-wrap: anywhere; }
+    .small { color: #596579; font-size: .92rem; }
+    @media print { body { background: white; } main { margin: 0; max-width: none; } th { position: static; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>بيانات لعبة Astra One ومصادرها</h1>
+  <p>فهرس عربي للبيانات العلمية ومعاملات المحاكاة الظاهرة في اللعبة، مع فصل المعلومة المرجعية عن الافتراضات التعليمية وقواعد اللعب.</p>
+  <p class="note"><strong>تنبيه النطاق:</strong> هذا الفهرس يجمع كل المعاملات العلمية/البيئية ومعاملات الموارد والطاقة والإشعاع والعبور المذكورة في نافذة «البيانات والمصادر»، ويضيف أهم إعدادات المحاكاة المرتبطة بها. لا يشمل نصوص كل الحوارات والاختيارات أو كل تغيّرات حالة الحفظ. اللعبة نموذج تعليمي غير معتمد من NASA وليست أداة هندسية أو طبية لتخطيط مهمة حقيقية.</p>
+  <div class="legend">
+    <span class="tag real">مرجع/رصد حقيقي</span>
+    <span class="tag derived">مشتق من مراجع</span>
+    <span class="tag approx">تقريب أو قيمة غير موثقة مباشرة</span>
+    <span class="tag fiction">إعداد خيالي/تدريبي للعبة</span>
+  </div>
+
+  <h2>1. البيئة والحقائق الكوكبية</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>البيان</th><th>القيمة في اللعبة</th><th>التصنيف</th><th>المصدر/الملاحظة</th></tr></thead>
+    <tbody>
+      <tr><td>جاذبية القمر</td><td>0.165 من جاذبية الأرض (g)</td><td><span class="tag real">مرجع حقيقي</span></td><td>مرجع عام: <a href="https://science.nasa.gov/moon/facts/">NASA — حقائق القمر</a> و<a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html">ورقة حقائق القمر</a>.</td></tr>
+      <tr><td>جاذبية المريخ</td><td>0.38 g</td><td><span class="tag real">مرجع حقيقي</span></td><td>مرجع عام: <a href="https://science.nasa.gov/mars/facts/">NASA — حقائق المريخ</a> و<a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html">ورقة حقائق المريخ</a>.</td></tr>
+      <tr><td>متوسط ضغط المريخ مقارنة بالأرض</td><td>0.6%؛ مشتق في اللعبة من 6.36 / 1,014 مليبار</td><td><span class="tag derived">قيمة مشتقة</span></td><td>الحساب مشتق من قيم الضغط المذكورة؛ راجع <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html">ورقة حقائق المريخ</a> و<a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html">ورقة حقائق الأرض</a>. الضغط يتغير بحسب الموقع والارتفاع.</td></tr>
+      <tr><td>تأخير اتصال المريخ باتجاه واحد</td><td>3–22 دقيقة</td><td><span class="tag approx">النطاق غير موثق مباشرة</span></td><td>ظاهرة التأخير حقيقية، لكن نافذة اللعبة لا تربط هذا النطاق بمصدر مباشر؛ ويتغير التأخير مع المسافة وموقع الكواكب.</td></tr>
+      <tr><td>مدة الليل القمري</td><td>نحو 14 يومًا أرضيًا</td><td><span class="tag approx">تقريب يعتمد على الموقع</span></td><td>مستند إلى سياق حقائق القمر، لكنه تقريب للعبة وظروف الإضاءة تختلف حسب الموقع.</td></tr>
+      <tr><td>حرارة الليل القمري</td><td>-173° مئوية</td><td><span class="tag approx">قيمة مرجعية متغيرة</span></td><td>حرارة السطح تختلف حسب الموقع والظروف؛ لا تمثل قيمة عامة ثابتة لكل المواقع.</td></tr>
+      <tr><td>فقد الطاقة الشمسية في عاصفة المريخ</td><td>80–95% لمدة 3–5 أيام</td><td><span class="tag fiction">إعداد محاكاة</span></td><td>قيمة تشغيلية للعبة وليست تنبؤًا بعاصفة محددة أو مواصفة نظام طاقة.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>2. استهلاك الطاقم والماء ودعم الحياة</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>البيان</th><th>القيمة في اللعبة</th><th>التصنيف</th><th>المصدر/الملاحظة</th></tr></thead>
+    <tbody>
+      <tr><td>أكسجين للفرد يوميًا</td><td>0.84 كجم</td><td><span class="tag fiction">مدخل تدريبي</span></td><td>ليس متطلبًا من NASA؛ صفحة ماء القمر المرتبطة في النافذة لا توثق هذا المعدل.</td></tr>
+      <tr><td>ماء للفرد يوميًا</td><td>3.8 لتر</td><td><span class="tag fiction">مدخل تدريبي</span></td><td>ليس متطلبًا عامًا لمهمة؛ يختلف الاستهلاك الفعلي بحسب النظام والطاقم.</td></tr>
+      <tr><td>غذاء معبأ للفرد يوميًا</td><td>2.39 كجم</td><td><span class="tag fiction">مدخل تدريبي</span></td><td>قيمة نموذج اللعبة وليست مواصفة إمداد معتمدة.</td></tr>
+      <tr><td>ثاني أكسيد الكربون الناتج للفرد يوميًا</td><td>1 كجم</td><td><span class="tag fiction">مدخل تدريبي</span></td><td>قيمة مبسطة في المحاكاة.</td></tr>
+      <tr><td>استرداد الماء حسب الصعوبة</td><td>سهل 98%؛ متوسط 94%؛ صعب 90%</td><td><span class="tag fiction">موازنة لعب</span></td><td>نسب افتراضية للتحكم بالتحدي، لا ضمان لجودة الماء أو كفاءة نظام حقيقي.</td></tr>
+      <tr><td>إنتاج الدفيئة في دورة النمو</td><td>20 كجم غذاء + 3 كجم أكسجين خلال 4 أيام</td><td><span class="tag fiction">نموذج مبسط</span></td><td>إنتاج المحاصيل الفعلي يعتمد على المحصول والبيئة والتجهيزات؛ ليست هذه مواصفة إنتاج موثقة.</td></tr>
+      <tr><td>ماء الدفيئة لكل دورة</td><td>10 لترات لكل 4 أيام</td><td><span class="tag fiction">نموذج مبسط</span></td><td>استهلاك مضبوط للعبة.</td></tr>
+      <tr><td>إنتاج وحدة استخدام الموارد المحلية (ISRU)</td><td>4 لترات ماء و0.84 كجم أكسجين يوميًا</td><td><span class="tag fiction">نموذج مبسط</span></td><td>إنتاج الوحدة ومعدلاتها افتراضية في المحاكاة؛ الأدلة على ماء القمر توفر سياقًا فقط، لا توثق هذا الإنتاج.</td></tr>
+      <tr><td>إنتاج معمل MOXIE في نموذج اللعبة</td><td>0.24 كجم أكسجين يوميًا</td><td><span class="tag fiction">تقريب للعبة</span></td><td>NASA توثق تجربة MOXIE بوصفها عرضًا تقنيًا لإنتاج الأكسجين من جو المريخ؛ قيمة اللعبة ليست معدل أداء ثابتًا للتجربة.</td></tr>
+      <tr><td>استهلاك التحليل الكهربائي للماء لكل أكسجين</td><td>1.125 كجم ماء لكل كجم أكسجين</td><td><span class="tag approx">معامل نموذج</span></td><td>تبسيط حسابي داخل المحاكاة، وليس ميزان كتلة كاملًا لنظام تشغيلي.</td></tr>
+      <tr><td>استهلاك الطاقة للفرد يوميًا</td><td>4 kWh</td><td><span class="tag fiction">معامل لعب</span></td><td>قيمة من نموذج موارد اللعبة.</td></tr>
+      <tr><td>تعافي الصحة بالراحة</td><td>نقطتا صحة</td><td><span class="tag fiction">قاعدة لعب</span></td><td>مقياس صحة تجريدي للعبة، وليس قيمة طبية.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>3. الطاقة والمباني</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>البيان</th><th>القيمة في اللعبة</th><th>التصنيف</th><th>المصدر/الملاحظة</th></tr></thead>
+    <tbody>
+      <tr><td>قدرة الألواح الشمسية الاسمية</td><td>القمر 15 kW؛ المريخ 7 kW</td><td><span class="tag fiction">إعداد لعب</span></td><td>قيم نظام اللعبة؛ لا تمثل تصميمًا لموقع أو مهمة محددة.</td></tr>
+      <tr><td>قدرة المفاعل الاسمية</td><td>25 kW</td><td><span class="tag fiction">إعداد لعب</span></td><td>نموذج لعبة؛ ذكر مفهوم Kilopower في وصف المهمة لا يجعل هذه القيمة مواصفة واقعية.</td></tr>
+      <tr><td>سعة البطارية</td><td>200 kWh</td><td><span class="tag fiction">إعداد لعب</span></td><td>عند حمل النجاة 27 kW، يعرض وصف المبنى نحو 7.4 ساعات حسابيًا.</td></tr>
+      <tr><td>حمل الطاقة لوضع النجاة</td><td>27 kW</td><td><span class="tag fiction">إعداد لعب</span></td><td>حمل تقريبي تجميعي خاص بالمحاكاة.</td></tr>
+      <tr><td>حمل وحدة السكن</td><td>15 kW</td><td><span class="tag fiction">إعداد لعب</span></td><td>حمل مبنى افتراضي.</td></tr>
+      <tr><td>حمل وحدة ISRU / الدفيئة</td><td>35 / 20 kW</td><td><span class="tag fiction">إعداد لعب</span></td><td>أحمال مبانٍ محددة للمحاكاة.</td></tr>
+      <tr><td>ميزانية الطاقة لكل يوم محاكى</td><td>0.025 ساعة قدرة اسمية = 90 ثانية</td><td><span class="tag fiction">تحجيم زمني</span></td><td>طبقة موازنة لتقليص محاكاة استهلاك الطاقة.</td></tr>
+      <tr><td>أحمال تشغيل المباني الأخرى</td><td>مركز القيادة 6؛ الاتصالات 3؛ غرفة الضغط 2؛ التخزين 1؛ الورشة 4؛ العربة 1؛ مطياف الكتلة 1؛ الروبوتات 2؛ المختبر 4؛ العيادة 3؛ MOXIE 6؛ تدوير الماء 2؛ درع الغبار 1؛ دعم الحياة 2؛ ملجأ العواصف 1؛ منفذ البدلة 0.5؛ التوسعة 2 kW</td><td><span class="tag fiction">قيم مباني اللعبة</span></td><td>قيم حمل تصميمية للعب، وليست بيانات مواصفات منشآت حقيقية.</td></tr>
+      <tr><td>ضغط الموئل الاسمي وتقدير التسرب</td><td>101.3 kPa اسمي؛ 75 kPa عند التسرب</td><td><span class="tag fiction">حالة محاكاة</span></td><td>قيم حالة للعبة؛ تقدير التسرب ليس قياسًا تشغيليًا أو حد سلامة.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>4. الإشعاع والعبور ومدد المهمات</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>البيان</th><th>القيمة في اللعبة</th><th>التصنيف</th><th>المصدر/الملاحظة</th></tr></thead>
+    <tbody>
+      <tr><td>إشعاع عبور المريخ</td><td>1.84 mSv/يوم</td><td><span class="tag approx">مدخل نموذجي بسياق تاريخي</span></td><td>مرتبط بدراسة RAD لرحلة MSL إلى المريخ؛ لم تُراجع القيمة الدقيقة ووحداتها وفترة متوسطها مقابل النتائج الرقمية الكاملة. يستخدمه النموذج لمسار المريخ فقط، وليس توقعًا لكل مهمة.</td></tr>
+      <tr><td>إشعاع سطح المريخ</td><td>0.64 mSv/يوم</td><td><span class="tag approx">مدخل لعبة غير متحقق</span></td><td>توفّر دراسة RAD على كيوريوسيتي سياقًا تاريخيًا؛ لم تُراجع هذه القيمة ووحداتها وفترة متوسطها مقابل النتائج الرقمية الكاملة. لا تُعرض كقياس مؤكد أو توقع عام.</td></tr>
+      <tr><td>إشعاع عبور القمر</td><td>1.84 mSv/يوم</td><td><span class="tag approx">عنصر لعب مؤقت</span></td><td>لا يوجد له قياس قمري موثق مباشرة في مرجع اللعبة؛ الرقم لا ينبغي اعتباره قياسًا حقيقيًا.</td></tr>
+      <tr><td>إشعاع سطح القمر</td><td>1.4 mSv/يوم</td><td><span class="tag approx">افتراض بلا مصدر مباشر</span></td><td>قيمة أساس للعبة لا يقدم قسم المصادر لها مرجع قياس مباشرًا.</td></tr>
+      <tr><td>معامل التدريع / عاصفة الغبار</td><td>0.25× / 1.5×</td><td><span class="tag fiction">معاملات لعب</span></td><td>تعديلات حسابية في نموذج اللعبة، وليست تنبؤًا موثقًا.</td></tr>
+      <tr><td>عتبة تنبيه الإشعاع التراكمية</td><td>600 mSv</td><td><span class="tag fiction">عتبة لعب</span></td><td>ليست حدًا طبيًا أو تشغيليًا من NASA. تشير NASA إلى عدم كفاية المعرفة للتوصية بحدود للمهام طويلة الأمد.</td></tr>
+      <tr><td>إشارة NOAA GOES للبروتونات</td><td>تدفق البروتونات عند طاقة ≥10 MeV؛ عتبات S1–S5: 10 / 100 / 1,000 / 10,000 / 100,000 pfu</td><td><span class="tag real">قياس فضائي مرجعه الأرض</span></td><td>إذا كانت أحدث قراءة بعمر 30 دقيقة أو أقل ووصلت S2+، تعرض اللعبة خيار تأجيل الاستكشاف لذلك اليوم المحاكى. هذا حداثة/أثر تدريبي، وليس تحويلًا إلى جرعة محلية للقمر أو المريخ؛ لا تتغير قيم mSv أو صحة الطاقم.</td></tr>
+      <tr><td>زمن العبور المحاكى لكل اتجاه</td><td>القمر يومان؛ المريخ 6 أيام</td><td><span class="tag fiction">ضغط زمني للعبة</span></td><td>أزمنة لعب مختصرة وليست مدد سفر فضائي واقعية.</td></tr>
+      <tr><td>مدة المهمة القصوى داخل اللعبة</td><td>100 يوم محاكى؛ خيارات المدة 10 و30 و60 و100 يوم</td><td><span class="tag fiction">حدود تحدي</span></td><td>لا تمثل جداول مهمات حقيقية؛ المهمات القصيرة محددة بـ30 يومًا، وبعض أنواع الاستيطان بـ100 يوم.</td></tr>
+      <tr><td>معدلات الانتقال المداري في العارض</td><td>حساب مثالي بنموذج جسمين/انتقال هوهمان</td><td><span class="tag approx">نموذج فيزيائي مبسط</span></td><td>يعتمد على ثوابت مدارية في الكود، ولا يحسب نوافذ الإطلاق أو الاضطرابات أو الاحتراق المحدود أو الهبوط؛ لا تستخدمه لتخطيط رحلة.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>5. جداول الطاقم وإعدادات اللعب الإضافية</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>البيان</th><th>القيمة/المحتوى</th><th>التصنيف</th><th>الملاحظة</th></tr></thead>
+    <tbody>
+      <tr><td>روتين اليوم الأساسي</td><td>إحاطة 1.5 ساعة؛ تمرين 2.5؛ عمل 3.5 + 3.5؛ غداء وراحة 1؛ تقييم صحي 1؛ وقت شخصي 2.5؛ احتياطي 0.5؛ نوم 8 ساعات</td><td><span class="tag fiction">جدول تدريبي</span></td><td>مجموعه 24 ساعة؛ يوم المريخ يضيف 39 دقيقة لمحاكاة طول اليوم الشمسي.</td></tr>
+      <tr><td>مهام اللاعب داخل اليوم</td><td>بحث 4 ساعات؛ استكشاف 6؛ صيانة 3؛ تمرين 2.5؛ راحة 2</td><td><span class="tag fiction">قواعد لعب</span></td><td>أزمنة أفعال المحاكاة.</td></tr>
+      <tr><td>معدلات صعوبة الاستهلاك</td><td>سهل 0.8×؛ عادي 1×؛ صعب 1.2×</td><td><span class="tag fiction">موازنة لعب</span></td><td>تعديل اصطناعي لا يمثل تفاوتًا واقعيًا ثابتًا.</td></tr>
+      <tr><td>احتمال الأحداث حسب الصعوبة</td><td>سهل 0.15؛ عادي 0.30؛ صعب 0.45 (مع سقف 0.9)</td><td><span class="tag fiction">احتمالات لعب</span></td><td>احتمالات مولدة للمحاكاة، وليست إحصاءات حوادث فضائية.</td></tr>
+      <tr><td>قيم تعليمية إضافية في الأكاديمية</td><td>ماء نظافة 24.5 لتر/فرد/يوم؛ تحذير CO₂ عند 0.8% وحد حرج تدريبي 1.0%؛ احتياطي بطارية مقترح ≥20%</td><td><span class="tag fiction">أمثلة تدريبية</span></td><td>ليست مواصفات طيران أو حدود سلامة معتمدة؛ الأكاديمية تنص على اختلاف المتطلبات الفعلية.</td></tr>
+      <tr><td>أمثلة مدد المهمات في الأكاديمية</td><td>إقامة قمرية قصيرة 7–14 يومًا / 2–4 أفراد؛ قاعدة قمرية 90–180 يومًا / 4–8؛ مواجهة المريخ 30–60 يوم سطح و300+ يوم عبور / 4–6؛ استيطان بالاقتران 500–900 يوم / 6–16</td><td><span class="tag approx">أمثلة توضيحية</span></td><td>مذكورة صراحة كأمثلة تخطيطية وليست حدودًا ثابتة أو متطلبات مهمة.</td></tr>
+      <tr><td>مفهوم الطاقم في سيناريو الأكاديمية</td><td>تحذير عاصفة تدريبية قبل الوصول بـ45 ثانية؛ طاقم من 4 أفراد في المثال</td><td><span class="tag fiction">سيناريو تدريبي</span></td><td>ليس إنذارًا حقيقيًا أو توقعًا شمسيًا.</td></tr>
+      <tr><td>سيناريوهات التدريب</td><td>خط أساس؛ جبهة غبار؛ تقنين مياه؛ نقص أكسجين؛ نشاط شمسي مرتفع؛ خلل ضغط الموئل؛ عطل الدفيئة</td><td><span class="tag fiction">سيناريوهات خيالية</span></td><td>تغير مخزون البداية وإنتاج الطاقة واستهلاك الماء واحتمال الأحداث.</td></tr>
+      <tr><td>الحوادث والقرارات</td><td>تسرب ماء؛ عاصفة شمسية؛ إضاءة منخفضة؛ مشكلة محاصيل؛ تسرب ختم؛ غبار على الألواح؛ انقطاع اتصال؛ إنذار طبي؛ جودة ماء؛ نيزك دقيق؛ خلل مغذيات الدفيئة</td><td><span class="tag fiction">أحداث محاكاة</span></td><td>أحداث تدريبية ذات خيارات وتأثيرات موارد مصممة للعب، وليست سجل حوادث حقيقية.</td></tr>
+      <tr><td>الإنشاء والتكاليف والمكافآت</td><td>تكاليف المباني، الشحن، مساحة القاعدة، مدد البناء، النقاط، الصحة، الرصيد، وتغييرات الموارد</td><td><span class="tag fiction">اقتصاد اللعبة</span></td><td>كلها وحدات لعب مجردة؛ لا تمثل تكلفة أو جدولًا أو كمية شحن لمهمة حقيقية.</td></tr>
+      <tr><td>ملفات المهمات والطاقم</td><td>الاستكشاف والاستيطان للقمر والمريخ؛ الحد الأدنى لأعداد الطاقم والأدوار والتخصصات</td><td><span class="tag fiction">أمثلة تخطيطية</span></td><td>وصف المهمة يصرح بأن المعدات والأنشطة إرشادات تدريبية وليست متطلبات تشغيلية معتمدة من NASA.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>6. جميع المصادر العلمية/التعليمية المستخدمة</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>المصدر</th><th>الرابط</th><th>كيف تستخدمه اللعبة</th></tr></thead>
+    <tbody>
+      <tr><td>NASA — حقائق القمر</td><td><a href="https://science.nasa.gov/moon/facts/">https://science.nasa.gov/moon/facts/</a></td><td>سياق وحقائق القمر؛ يظهر في ملفات المهمات والأكاديمية ومراجع البيئة.</td></tr>
+      <tr><td>NASA — ماء القمر وجليده</td><td><a href="https://science.nasa.gov/moon/moon-water-and-ices/">https://science.nasa.gov/moon/moon-water-and-ices/</a></td><td>سياق وجود الماء القمري؛ لا يثبت معدلات الاستهلاك أو إنتاج ISRU في اللعبة.</td></tr>
+      <tr><td>NASA — حقائق المريخ</td><td><a href="https://science.nasa.gov/mars/facts/">https://science.nasa.gov/mars/facts/</a></td><td>سياق حقائق المريخ وملفات المهمات التعليمية.</td></tr>
+      <tr><td>NASA/NSSDC — ورقة حقائق القمر</td><td><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html">https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html</a></td><td>مرجع حقائق كوكبية مرتبط بمعاملات القمر.</td></tr>
+      <tr><td>NASA/NSSDC — ورقة حقائق المريخ</td><td><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html">https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html</a></td><td>مرجع حقائق كوكبية مرتبط بمعاملات المريخ.</td></tr>
+      <tr><td>NASA/NSSDC — ورقة حقائق الأرض</td><td><a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html">https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html</a></td><td>مرجع مقارنة الأرض المستخدم في نسبة الضغط المشتقة.</td></tr>
+      <tr><td>NASA — الإشعاع الفضائي</td><td><a href="https://www.nasa.gov/directorates/esdmd/hhp/space-radiation/">https://www.nasa.gov/directorates/esdmd/hhp/space-radiation/</a></td><td>سياق مخاطر الإشعاع وحدود المعرفة؛ لا يجعل عتبة اللعبة حدًا طبيًا أو تشغيليًا.</td></tr>
+      <tr><td>دراسة RAD لعبور MSL إلى المريخ (Science، DOI)</td><td><a href="https://doi.org/10.1126/science.1235989">https://doi.org/10.1126/science.1235989</a></td><td>تثبت سياق القياسات التاريخية داخل مركبة MSL أثناء العبور؛ لا توثق وحدها القيمة الرقمية 1.84 mSv/يوم أو متوسطها المستخدم في اللعبة. راجع النتائج الكاملة قبل اعتبار الرقم قياسًا مباشرًا.</td></tr>
+      <tr><td>دراسة RAD لقياسات سطح المريخ بواسطة كيوريوسيتي (Science، DOI)</td><td><a href="https://doi.org/10.1126/science.1244797">https://doi.org/10.1126/science.1244797</a></td><td>مرجع الدراسة التاريخية التي تقيس الجرعة الممتصة ومكافئ الجرعة على سطح المريخ؛ لا توثق البيانات المتاحة هنا القيمة الرقمية 0.64 mSv/يوم المستخدمة في اللعبة.</td></tr>
+      <tr><td>سجل NASA NTRS لورقة قياسات RAD السطحية</td><td><a href="https://ntrs.nasa.gov/citations/20180007641">سجل الدراسة لدى NASA NTRS</a></td><td>يؤكد سجل NASA عنوان الورقة ونطاقها: نحو 300 يوم من رصد RAD على سطح المريخ ابتداءً من 7 أغسطس 2012؛ سجل NTRS لا يوفر تنزيلًا للورقة ولا يثبت الرقم العددي المستخدم في اللعبة.</td></tr>
+      <tr><td>NASA DONKI / CCMC — سجل الانبعاثات الكتلية الإكليلية</td><td><a href="https://ccmc.gsfc.nasa.gov/tools/DONKI/">https://ccmc.gsfc.nasa.gov/tools/DONKI/</a></td><td>سجلات رصد الانبعاثات الشمسية؛ لا تمثل توقعات أو جرعات إشعاع محلية على القمر.</td></tr>
+      <tr><td>NASA DONKI — مرجع الواجهة البرمجية الحالي</td><td><a href="https://ccmc.gsfc.nasa.gov/DONKI/api/">https://ccmc.gsfc.nasa.gov/DONKI/api/</a>؛ <a href="https://ccmc.gsfc.nasa.gov/DONKI/guide/">دليل DONKI</a></td><td>المرجع الحالي للبحث والاستعلام. انتقل الموقع/الواجهة إلى النطاق الرسمي الحالي؛ راجع التوثيق قبل بناء تكامل جديد. منتجات DONKI بحثية أولية «كما هي» وليست تنبؤات تشغيلية أو تقديرات جرعة.</td></tr>
+      <tr><td>NOAA Space Weather Prediction Center</td><td><a href="https://www.spaceweather.gov/">https://www.spaceweather.gov/</a></td><td>المصدر الرسمي الأمريكي لتنبؤات الطقس الفضائي بحسب إخلاء المسؤولية الحالي لـCCMC DONKI؛ لا تستخدم سجلات DONKI بدل التنبؤات الرسمية.</td></tr>
+      <tr><td>NOAA SWPC — GOES تدفق البروتونات التكاملي</td><td><a href="https://services.swpc.noaa.gov/json/goes/primary/integral-protons-1-day.json">بيانات GOES الحية</a>؛ <a href="https://www.swpc.noaa.gov/noaa-scales-explanation">مقياس عواصف الإشعاع S1–S5</a></td><td>تعرض اللعبة أحدث قراءة لقناة ≥10 MeV وتطبق حدود NOAA لعرض تنبيه تدريبي فقط. لا تعادل القراءة قياس جرعة على القمر/المريخ ولا تُستخدم لتغيير نموذج الإشعاع الطبي أو العددي.</td></tr>
+      <tr><td>CCMC DONKI — واجهة CME المستخدمة حاليًا</td><td><a href="https://ccmc.gsfc.nasa.gov/DONKI/api/">مرجع الواجهة الحالية</a>؛ endpoint المستخدم: <code>https://ccmc.gsfc.nasa.gov/DONKI/WS/get/CME</code></td><td>يطلب الاستعلام التاريخ الحالي بالتوقيت العالمي والتواريخ التقويمية الستة السابقة (سبعة تواريخ، لا فترة متحركة من 168 ساعة)؛ وتُعرض سجلات رصد حديثة أو مخزنة أو أرشيفية.</td></tr>
+      <tr><td>NASA Open APIs</td><td><a href="https://api.nasa.gov/">https://api.nasa.gov/</a></td><td>بوابة لاكتشاف واجهات NASA والاطلاع على طلب مفتاح API. حدود الاستخدام ومتطلبات المفتاح تختلف حسب الواجهة؛ لا تضع مفتاحًا سريًا في تطبيق ويب عام. واجهة DONKI الحالية المستخدمة هنا تابعة لـCCMC.</td></tr>
+      <tr><td>CCMC DONKI — استعلام الأرشيف المحدد في الكود</td><td><a href="https://ccmc.gsfc.nasa.gov/DONKI/WS/get/CME?startDate=2025-01-01&amp;endDate=2025-01-07">استعلام 1–7 يناير 2025</a></td><td>رابط الاستعلام التاريخي المقابل لسجل الأرشيف الاحتياطي.</td></tr>
+      <tr><td>NASA Open Science Data Repository (OSDR)</td><td><a href="https://osdr.nasa.gov/bio/repo/">مستودع OSDR</a>؛ <a href="https://osdr.nasa.gov/osdr/data/search?term=spaceflight%20bone%20density">بحث عن الرحلات الفضائية وكثافة العظام</a></td><td>مستودع أبحاث بيولوجيا الفضاء وصحة رواد الفضاء؛ النتائج تشمل تصميمات تجارب وكائنات مختلفة، وليست تلقائيًا إرشادًا سريريًا للبشر.</td></tr>
+      <tr><td>RadLab — OSDR Radiation Dosimetry Database</td><td><a href="https://visualization.osdr.nasa.gov/radlab/gui/data-api/">واجهة RadLab وتوثيق Data API</a></td><td>يوثق واجهة برمجية للاستعلام عن قياسات أجهزة الجرعات، مثل معدل الجرعة الممتصة (μGy/hour) ومعدل مكافئ الجرعة (μSv/hour). السجلات المعروضة تشمل منصات/أجهزة محددة وقياسات محطة الفضاء الدولية؛ لا تمثل قياسًا مباشرًا للقمر أو المريخ ولا تُستبدل بها معايرة جرعة كوكبية.</td></tr>
+      <tr><td>NASA Mars Trek</td><td><a href="https://trek.nasa.gov/mars/">https://trek.nasa.gov/mars/</a></td><td>بوابة تفاعلية لصور وطبقات تضاريس المريخ وبيانات من بعثات NASA؛ توفر سياقًا جغرافيًا ولا تقدم توصية معتمدة لموقع هبوط قاعدة.</td></tr>
+      <tr><td>وكالة الفضاء الكندية — إنتاج الغذاء على القمر والمناطق النائية</td><td><a href="https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/">حقيبة إنتاج الغذاء</a></td><td>مورد تعليمي للمعلمين والشباب عن الغذاء في الفضاء والمناطق النائية؛ لا يثبت إنتاجية الدفيئة الرقمية في اللعبة.</td></tr>
+      <tr><td>وكالة الفضاء الكندية — موارد STEM للمنظمات الشبابية</td><td><a href="https://www.asc-csa.gc.ca/eng/youth-educators/resources-stem-and-youth-organizations.asp">موارد STEM والفضاء</a></td><td>أنشطة وموارد تعليمية ثنائية اللغة للمعلمين والمنظمات المجتمعية.</td></tr>
+      <tr><td>NASA — محطة الفضاء الدولية</td><td><a href="https://www.nasa.gov/international-space-station/">https://www.nasa.gov/international-space-station/</a></td><td>قراءة تعليمية عن محطة مأهولة وأنظمة المهمات؛ ليست مصدرًا مباشرًا لقيم نموذج اللعبة.</td></tr>
+      <tr><td>NASA — حقائق محطة الفضاء الدولية</td><td><a href="https://www.nasa.gov/international-space-station/space-station-facts-and-figures/">حقائق وأرقام المحطة</a></td><td>مصدر الحقائق المعروضة عن زمن دوران المحطة حول الأرض، واستمرار وجود طاقم على متنها، وإمكان الوصول إليها بعد الإطلاق.</td></tr>
+      <tr><td>NASA — مهمة بيرسيفيرانس وتجربة MOXIE</td><td><a href="https://science.nasa.gov/mission/mars-2020-perseverance/">https://science.nasa.gov/mission/mars-2020-perseverance/</a></td><td>سياق حقيقي لتجربة إنتاج الأكسجين MOXIE؛ إنتاج اللعبة اليومي البالغ 0.24 كجم نموذج مصغر وليس الأداء الفعلي للتجربة.</td></tr>
+      <tr><td>ثوابت نموذج الانتقال المداري</td><td>وحدة فلكية؛ نصف قطر مدار المريخ؛ مسافة القمر؛ مدار الوقوف الأرضي؛ معاملات الجاذبية للشمس والأرض</td><td>القيم الرقمية مضمنة في <a href="src/game/flightPhysics.ts">كود العارض المداري</a>، لكن الكود لا يذكر مراجع خارجية لها؛ لذلك لم تُنسب هنا إلى مرجع لم يذكره المشروع.</td></tr>
+      <tr><td>خطوط واجهة المستخدم (ليست مصدر بيانات علمية)</td><td><a href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">Google Fonts CSS</a></td><td>تحميل خطوط الواجهة فقط؛ ليس مصدرًا علميًا أو مصدرًا لمعاملات اللعبة.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>7. بيانات DONKI المؤرشفة ورابط كل سجل</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>المعرف/التاريخ</th><th>البيانات</th><th>رابط المصدر</th><th>التصنيف والحدود</th></tr></thead>
+    <tbody>
+      <tr><td>2025-01-01 02:24 UTC — 2025-01-01T02:24:00-CME-001</td><td>سرعة 428 كم/ث؛ الموقع S15W77</td><td><a href="https://ccmc.gsfc.nasa.gov/DONKI/view/CME/36174/-1">سجل CME</a>؛ <a href="https://ccmc.gsfc.nasa.gov/DONKI/view/CMEAnalysis/36175/-1">تحليل CME</a></td><td><span class="tag real">سجل رصد حقيقي</span>؛ تحليل إكليل شمسي، وليس قياس إشعاع قمريًا أو تقدير جرعة للطاقم.</td></tr>
+      <tr><td>السجلات الحديثة</td><td>حتى 5 سجلات مع وقت الرصد والسرعة والموقع عند توفرها</td><td><a href="https://ccmc.gsfc.nasa.gov/DONKI/api/">مرجع واجهة CME الحالية لـCCMC DONKI</a></td><td><span class="tag real">رصد حقيقي عند نجاح التحديث</span>؛ عند عدم توفر الاتصال تستخدم اللعبة بيانات مخزنة أو سجل الأرشيف.</td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="small">أماكن البيانات في المشروع: <a href="src/components/DataOriginsModal.tsx">نافذة البيانات والمصادر</a>، <a href="src/game/constants.ts">ثوابت البيئة والطاقة والموارد</a>، <a href="src/game/model.ts">قواعد المحاكاة</a>، <a href="src/game/flightPhysics.ts">نموذج الانتقال المداري</a>، <a href="src/game/nasaData.ts">بيانات DONKI</a>، <a href="src/game/spaceWeather.ts">إشارة NOAA GOES</a>، <a href="src/game/missionProfiles.ts">ملفات المهمات</a>، <a href="src/components/LearningAcademy.tsx">الأكاديمية التعليمية</a>.</p>
+</main>
+</body>
+</html>
