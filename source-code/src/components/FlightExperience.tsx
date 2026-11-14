@@ -63,7 +63,7 @@ export function FlightExperience({
   const canPilot = canControlFlight(state)
   const flightSessionKey = `astra-one-flight-view-v1:${state.runId}:${leg}`
   const [restoredFlight] = useState(() => readFlightSessionState(flightSessionKey))
-  const [profile, setProfile] = useState<TransitChoice | null>(restoredFlight?.profile ?? null)
+  const [profile, setProfile] = useState<TransitChoice>(restoredFlight?.profile ?? 'conservative')
   const [speed, setSpeed] = useState<FlightSpeed>(restoredFlight?.speed ?? 1)
   const [phase, setPhase] = useState<FlightPhase>(restoredFlight?.phase ?? 'preflight')
   const [progress, setProgress] = useState(restoredFlight?.progress ?? 0)
@@ -336,7 +336,7 @@ export function FlightExperience({
           </>
         ) : null}
 
-        {canPilot && phase === 'preflight' && profile ? (
+        {canPilot && phase === 'preflight' ? (
           <button type="button" className="flight-launch-button" onClick={beginFlight}>
             <Rocket size={17} /> {t.beginFlightButton}
           </button>
